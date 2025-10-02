@@ -1,4 +1,4 @@
-        .cta-button {        /* Mobile Responsiveness */<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -157,6 +157,7 @@
             object-fit: cover;
         }
 
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .hero-images {
                 flex-direction: column;
@@ -170,25 +171,6 @@
                 height: 200px;
                 flex: none;
             }
-        }
-            display: inline-block;
-            background: #F8De8c;
-            color: #2c3e50;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(248, 222, 140, 0.4);
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta-button:hover {
-            background: #F5D76E;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(248, 222, 140, 0.5);
         }
 
         /* Benefits Section */
@@ -404,31 +386,27 @@
             background-color: #a5d6a7;
         }
 
-        .shop-card-image.variety {
-            background-image: url('image4.jpg');
-            background-size: cover;
-            background-position: center;
-            background-color: #F8De8c;
-        }
-
         .shop-card-content {
             padding: 1.5rem;
         }
 
-        .shop-button {
+        .shop-button,
+        .cta-button {
             background: #e74c3c;
             color: white;
             padding: 12px 30px;
             border: none;
             border-radius: 25px;
             font-weight: 600;
+            font-family: 'Poppins', sans-serif;
             cursor: pointer;
             transition: background 0.3s ease;
             text-decoration: none;
             display: inline-block;
         }
 
-        .shop-button:hover {
+        .shop-button:hover,
+        .cta-button:hover {
             background: #c0392b;
         }
 
@@ -631,7 +609,7 @@
                     </div>
                 </div>
                 
-                <button class="cta-button" onclick="showPage('shop')">Shop now</button>
+                <a href="#" class="cta-button" onclick="showPage('shop'); return false;">Shop now</a>
             </div>
         </section>
 
@@ -704,7 +682,7 @@
                             <h3>Pink flow</h3>
                             <p>Soft pink design with elegant flow patterns. Made with organic cotton and pure beeswax. Perfect for everyday use.</p>
                             <div class="price">€11.00</div>
-                            <a href="https://bol.com" target="_blank" class="shop-button">Buy on Bol.com</a>
+                            <a href="https://www.bol.com/nl/nl/p/wrapz-bijenwas-wrap-herbruikbaar-boterhamzakje-herbruikbaar-folie-herbruikbare-afdekdoek-bijenwas-doeken-beeswax-wrap-bijenwasdoek-design-pink-flow/9300000238630950/?cid=1759415265743-9093086157527&bltgh=ba84d79a-5665-44cf-9c7c-cacbb97ca981.ProductList_Middle.1.ProductTitle" target="_blank" class="shop-button">Buy on Bol.com</a>
                         </div>
                     </div>
                     <div class="shop-card">
@@ -713,7 +691,7 @@
                             <h3>Cherry on top</h3>
                             <p>Playful cherry design on sunny yellow background. Perfect for families with children and adding fun to food storage.</p>
                             <div class="price">€11.00</div>
-                            <a href="https://bol.com" target="_blank" class="shop-button">Buy on Bol.com</a>
+                            <a href="https://www.bol.com/nl/nl/p/wrapz-bijenwas-wrap-herbruikbaar-boterhamzakje-herbruikbaar-folie-herbruikbare-afdekdoek-bijenwas-doeken-beeswax-wrap-bijenwasdoek-design-cherry-on-top/9300000238048771/?cid=1759415238723-7796839218924&bltgh=ba84d79a-5665-44cf-9c7c-cacbb97ca981.ProductList_Middle.0.ProductTitle" target="_blank" class="shop-button">Buy on Bol.com</a>
                         </div>
                     </div>
                     <div class="shop-card">
@@ -722,16 +700,7 @@
                             <h3>Bee on a mission</h3>
                             <p>Our signature bee pattern celebrating the natural source of our beeswax coating. A tribute to nature's workers.</p>
                             <div class="price">€11.00</div>
-                            <a href="https://bol.com" target="_blank" class="shop-button">Buy on Bol.com</a>
-                        </div>
-                    </div>
-                    <div class="shop-card">
-                        <div class="shop-card-image variety"></div>
-                        <div class="shop-card-content">
-                            <h3>Variety pack</h3>
-                            <p>Get all three designs in one convenient package. Perfect for trying different sizes and patterns. Best value!</p>
-                            <div class="price">€30.00 <span style="text-decoration: line-through; color: #7f8c8d; font-size: 0.9rem;">€33.00</span></div>
-                            <a href="https://bol.com" target="_blank" class="shop-button">Buy on Bol.com</a>
+                            <a href="https://www.bol.com/nl/nl/p/wrapz-bijenwas-wrap-herbruikbaar-boterhamzakje-herbruikbaar-folie-herbruikbare-afdekdoek-bijenwas-doeken-beeswax-wrap-bijenwasdoek-design-bee-on-a-mission/9300000238630970/?cid=1759415284693-4503408784080&bltgh=ba84d79a-5665-44cf-9c7c-cacbb97ca981.ProductList_Middle.2.ProductTitle" target="_blank" class="shop-button">Buy on Bol.com</a>
                         </div>
                     </div>
                 </div>
@@ -831,7 +800,7 @@
                         <span class="faq-icon">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Each individual wrap measures approximately 35x35cm, which is perfect for most everyday uses like covering bowls, wrapping sandwiches, or storing cut fruits and vegetables. Our variety pack contains different patterns in the same versatile size.</p>
+                        <p>Each individual wrap measures approximately 35x35cm, which is perfect for most everyday uses like covering bowls, wrapping sandwiches, or storing cut fruits and vegetables. All three designs are available in this versatile size.</p>
                     </div>
                 </div>
 
@@ -974,14 +943,8 @@
                     <p>Indien een bepaling van deze voorwaarden nietig of vernietigbaar blijkt, blijven de overige bepalingen volledig van kracht.</p>
 
                     <hr style="margin: 2rem 0;">
-                    
-                    <h2>Contactgegevens</h2>
-                    <p>
-                        <strong>Wrapz</strong><br>
-                        Amsterdam, Nederland<br>
-                        E-mail: info@wrapz.com<br>
-                        Telefoon: +31 6 12345678
-                    </p>
+
+                    <p>Voor actuele contactgegevens verwijzen we graag naar onze <a href="#" onclick="showPage('contact')">contactpagina</a>.</p>
                 </div>
             </div>
         </div>
@@ -996,8 +959,7 @@
                     <div class="contact-info">
                         <h3>Contact information</h3>
                         <p><strong>Email:</strong> info@wrapz.com</p>
-                        <p><strong>Phone:</strong> +31 6 12345678</p>
-                        <p><strong>Address:</strong> Amsterdam, Netherlands</p>
+                        <p><strong>KVK:</strong> 71344780</p>
                         
                         <h3 style="margin-top: 2rem;">Business hours</h3>
                         <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
@@ -1056,12 +1018,9 @@
                 <div class="footer-section">
                     <h4 style="color: #F8De8c;">Legal</h4>
                     <p><a href="#" onclick="showPage('terms')">Terms & conditions</a></p>
-                    <p><a href="#">Privacy policy</a></p>
-                    <p><a href="#">Returns</a></p>
                 </div>
                 <div class="footer-section">
                     <h4 style="color: #F8De8c;">Customer service</h4>
-                    <p><a href="#">Shipping info</a></p>
                     <p><a href="#" onclick="showPage('faq')">FAQ</a></p>
                     <p><a href="#" onclick="showPage('contact')">Contact us</a></p>
                 </div>

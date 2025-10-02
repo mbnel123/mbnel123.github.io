@@ -1,0 +1,1159 @@
+        .cta-button {        /* Mobile Responsiveness */<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrapz - Sustainable Beeswax Food Wraps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fefefe;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #F8De8c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #F8De8c 0%, #FFF2A6 100%);
+            padding: 160px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-20px) rotate(360deg); }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #34495e;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Hero Images */
+        .hero-images {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-image {
+            flex: 1;
+            width: 280px;
+            height: 220px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid rgba(255,255,255,0.8);
+        }
+
+        .hero-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .hero-images {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                max-width: 300px;
+            }
+            
+            .hero-image {
+                width: 280px;
+                height: 200px;
+                flex: none;
+            }
+        }
+            display: inline-block;
+            background: #F8De8c;
+            color: #2c3e50;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(248, 222, 140, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button:hover {
+            background: #F5D76E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(248, 222, 140, 0.5);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        /* Product Grid */
+        .products-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #F8De8c;
+        }
+
+        .product-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .orange-wrap {
+            background-image: url('image1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #FFB6C1;
+        }
+
+        .cherry-wrap {
+            background-image: url('image2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #F8De8c;
+        }
+
+        .bee-wrap {
+            background-image: url('image3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #a5d6a7;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .product-card p {
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #F8De8c;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #F8De8c;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #F8De8c;
+        }
+
+        /* Page Content (initially hidden) */
+        .page-content {
+            display: none;
+            padding: 0;
+            min-height: 80vh;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        /* Shop Page Styles */
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .shop-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .shop-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .shop-card-image {
+            height: 280px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shop-card-image.orange {
+            background-image: url('image1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #FFB6C1;
+        }
+
+        .shop-card-image.cherry {
+            background-image: url('image2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #F8De8c;
+        }
+
+        .shop-card-image.bee {
+            background-image: url('image3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #a5d6a7;
+        }
+
+        .shop-card-image.variety {
+            background-image: url('image4.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #F8De8c;
+        }
+
+        .shop-card-content {
+            padding: 1.5rem;
+        }
+
+        .shop-button {
+            background: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .shop-button:hover {
+            background: #c0392b;
+        }
+
+        /* Contact Page Styles */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #F8De8c;
+        }
+
+        /* FAQ Styles */
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            border: none;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #F8De8c;
+        }
+
+        .faq-question.active {
+            background: #F8De8c;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Terms Styles */
+        .terms-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .terms-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+
+        .terms-content h3 {
+            color: #2c3e50;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .terms-content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .terms-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .terms-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <img src="wrapz-logo.png" alt="Wrapz Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('shop')">Shop</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('faq')">FAQ</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Homepage Content -->
+    <div id="home-page" class="page-content active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Keep food fresh, naturally</h1>
+                <p>Discover our sustainable beeswax food wraps - the eco-friendly alternative to plastic wrap that keeps your food fresh longer</p>
+                
+                <div class="hero-images">
+                    <div class="hero-image">
+                        <img src="image5.jpg" alt="Wrapz in use - wrapping cheese">
+                    </div>
+                    <div class="hero-image">
+                        <img src="image6.jpg" alt="Wrapz food wrap in kitchen setting">
+                    </div>
+                    <div class="hero-image">
+                        <img src="image7.jpg" alt="Wrapz covering bread and bowl">
+                    </div>
+                </div>
+                
+                <button class="cta-button" onclick="showPage('shop')">Shop now</button>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Why choose Wrapz?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🥗</div>
+                        <h3>Keeps food fresh</h3>
+                        <p>Natural antibacterial properties extend freshness</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">♻️</div>
+                        <h3>100% sustainable</h3>
+                        <p>Made from organic cotton and natural beeswax</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🌱</div>
+                        <h3>Biodegradable</h3>
+                        <p>Completely compostable when it's time to replace</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💧</div>
+                        <h3>Easy to clean</h3>
+                        <p>Simply rinse with cool water and mild soap</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Preview -->
+        <section class="products-section">
+            <div class="container">
+                <h2 class="section-title">Our natural food wraps</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image orange-wrap"></div>
+                        <h3>Pink flow</h3>
+                        <p>Soft pink design with elegant flow patterns. Perfect for covering bowls and wrapping fruits</p>
+                        <div class="price">€11.00</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image cherry-wrap"></div>
+                        <h3>Cherry on top</h3>
+                        <p>Playful cherry design on sunny yellow background. Fun and functional for kids' lunches</p>
+                        <div class="price">€11.00</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image bee-wrap"></div>
+                        <h3>Bee on a mission</h3>
+                        <p>Our signature bee pattern celebrating the natural source of our beeswax coating</p>
+                        <div class="price">€11.00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Shop Page -->
+    <div id="shop-page" class="page-content">
+        <div style="padding-top: 160px; padding-bottom: 80px;">
+            <div class="container">
+                <h1 class="section-title">Shop our collection</h1>
+                <div class="shop-grid">
+                    <div class="shop-card">
+                        <div class="shop-card-image orange"></div>
+                        <div class="shop-card-content">
+                            <h3>Pink flow</h3>
+                            <p>Soft pink design with elegant flow patterns. Made with organic cotton and pure beeswax. Perfect for everyday use.</p>
+                            <div class="price">€11.00</div>
+                            <a href="https://bol.com" target="_blank" class="shop-button">Buy on Bol.com</a>
+                        </div>
+                    </div>
+                    <div class="shop-card">
+                        <div class="shop-card-image cherry"></div>
+                        <div class="shop-card-content">
+                            <h3>Cherry on top</h3>
+                            <p>Playful cherry design on sunny yellow background. Perfect for families with children and adding fun to food storage.</p>
+                            <div class="price">€11.00</div>
+                            <a href="https://bol.com" target="_blank" class="shop-button">Buy on Bol.com</a>
+                        </div>
+                    </div>
+                    <div class="shop-card">
+                        <div class="shop-card-image bee"></div>
+                        <div class="shop-card-content">
+                            <h3>Bee on a mission</h3>
+                            <p>Our signature bee pattern celebrating the natural source of our beeswax coating. A tribute to nature's workers.</p>
+                            <div class="price">€11.00</div>
+                            <a href="https://bol.com" target="_blank" class="shop-button">Buy on Bol.com</a>
+                        </div>
+                    </div>
+                    <div class="shop-card">
+                        <div class="shop-card-image variety"></div>
+                        <div class="shop-card-content">
+                            <h3>Variety pack</h3>
+                            <p>Get all three designs in one convenient package. Perfect for trying different sizes and patterns. Best value!</p>
+                            <div class="price">€30.00 <span style="text-decoration: line-through; color: #7f8c8d; font-size: 0.9rem;">€33.00</span></div>
+                            <a href="https://bol.com" target="_blank" class="shop-button">Buy on Bol.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Page -->
+    <div id="faq-page" class="page-content">
+        <div style="padding-top: 160px; padding-bottom: 80px;">
+            <div class="container">
+                <h1 class="section-title">Frequently asked questions</h1>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How long do Wrapz food wraps last?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>With proper care, our beeswax food wraps can last up to 12 months with regular use. The lifespan depends on how often you use them and how well you maintain them. When the wax coating starts to wear off or the wrap becomes less sticky, it's time to replace it.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do I clean my Wrapz?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cleaning is simple! Gently wash your wraps in cool water with mild dish soap. Avoid hot water as it can melt the beeswax coating. Let them air dry completely before storing. Never put them in the dishwasher or microwave.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What foods can I wrap with Wrapz?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can wrap most foods including fruits, vegetables, cheese, bread, and sandwiches. They're perfect for covering bowls and containers. However, avoid wrapping raw meat, fish, or very hot foods as this can damage the wax coating and may not be hygienic.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Are Wrapz safe for food contact?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our wraps are made with food-grade organic cotton and pure beeswax, making them completely safe for direct food contact. All our materials meet EU food safety standards and are free from harmful chemicals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Can I use Wrapz in the fridge and freezer?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Our wraps work great in the refrigerator and can be used in the freezer for short-term storage. The cool temperature actually helps the wrap maintain its shape and stickiness better.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What makes Wrapz different from plastic wrap?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Unlike single-use plastic wrap, Wrapz are reusable for up to a year, completely biodegradable, and made from natural materials. They're also breathable, which helps keep produce fresh longer, and they don't contain any harmful chemicals or microplastics.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do I make my wraps sticky again?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If your wrap loses its stickiness, try warming it gently with your hands or placing it in a warm (not hot) place for a few minutes. The natural warmth will soften the beeswax and restore its adhesive properties.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Are your wraps suitable for vegans?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our wraps contain beeswax, which is an animal product, so they are not suitable for strict vegans. However, we source our beeswax ethically from sustainable beekeeping practices that support bee populations and environmental health.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What sizes are available?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Each individual wrap measures approximately 35x35cm, which is perfect for most everyday uses like covering bowls, wrapping sandwiches, or storing cut fruits and vegetables. Our variety pack contains different patterns in the same versatile size.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you offer international shipping?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Currently, we ship within the Netherlands and EU countries through our Bol.com store. For international shipping outside the EU, please contact us directly and we'll do our best to accommodate your request.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Page -->
+    <div id="terms-page" class="page-content">
+        <div style="padding-top: 160px; padding-bottom: 80px;">
+            <div class="container">
+                <div class="terms-content">
+                    <h1>Algemene Voorwaarden</h1>
+                    <p><em>Laatst bijgewerkt: januari 2025</em></p>
+                    
+                    <h2>1. Algemene Bepalingen</h2>
+                    <h3>1.1 Toepasselijkheid</h3>
+                    <p>Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, overeenkomsten en leveringen van Wrapz, gevestigd in Amsterdam, Nederland. Door het plaatsen van een bestelling accepteert de koper deze voorwaarden volledig.</p>
+                    
+                    <h3>1.2 Definities</h3>
+                    <ul>
+                        <li><strong>Wrapz:</strong> de verkoper van bijenwas voedselverpakkingen</li>
+                        <li><strong>Koper:</strong> de natuurlijke of rechtspersoon die een overeenkomst aangaat met Wrapz</li>
+                        <li><strong>Producten:</strong> de door Wrapz aangeboden bijenwas food wraps en gerelateerde artikelen</li>
+                    </ul>
+
+                    <h2>2. Aanbiedingen en Overeenkomsten</h2>
+                    <h3>2.1 Aanbiedingen</h3>
+                    <p>Alle aanbiedingen zijn vrijblijvend en onder voorbehoud van beschikbaarheid. Prijzen zijn inclusief BTW tenzij anders vermeld. Wrapz behoudt zich het recht voor om prijzen en productinformatie te wijzigen zonder voorafgaande kennisgeving.</p>
+                    
+                    <h3>2.2 Totstandkoming overeenkomst</h3>
+                    <p>Een overeenkomst komt tot stand door het plaatsen en bevestigen van een bestelling via onze verkoop partners (zoals Bol.com) of door directe communicatie met Wrapz.</p>
+
+                    <h2>3. Levering en Uitvoering</h2>
+                    <h3>3.1 Levertermijn</h3>
+                    <p>Wij streven ernaar bestellingen binnen 1-3 werkdagen te verwerken. Exacte levertijden zijn afhankelijk van onze verkoop partners en worden bij bestelling gecommuniceerd.</p>
+                    
+                    <h3>3.2 Risico-overgang</h3>
+                    <p>Het risico van verlies of beschadiging gaat over op de koper op het moment van levering aan het opgegeven adres.</p>
+
+                    <h2>4. Prijzen en Betaling</h2>
+                    <h3>4.1 Prijzen</h3>
+                    <p>Alle prijzen zijn in euro's en inclusief BTW. Verzendkosten komen voor rekening van de koper tenzij anders overeengekomen.</p>
+                    
+                    <h3>4.2 Betaling</h3>
+                    <p>Betaling geschiedt via de betaalmethoden van onze verkoop partners. Bij directe verkoop hanteren wij de gangbare online betaalmethoden.</p>
+
+                    <h2>5. Herroepingsrecht en Retouren</h2>
+                    <h3>5.1 Herroepingsrecht</h3>
+                    <p>Conform de Nederlandse wet heeft de consument het recht om binnen 14 dagen na ontvangst zonder opgave van redenen de overeenkomst te herroepen.</p>
+                    
+                    <h3>5.2 Uitzonderingen herroepingsrecht</h3>
+                    <p>Het herroepingsrecht vervalt voor producten die om hygiënische redenen niet geschikt zijn voor retournering nadat ze zijn gebruikt voor voedselverpakking.</p>
+
+                    <h2>6. Garantie en Aansprakelijkheid</h2>
+                    <h3>6.1 Uitsluiting garantie</h3>
+                    <p>Wrapz levert producten "as is" zonder enige garantie behalve de wettelijk verplichte garantie voor conformiteit. Alle andere garanties, uitdrukkelijk of impliciet, worden uitdrukkelijk uitgesloten.</p>
+                    
+                    <h3>6.2 Volledige uitsluiting aansprakelijkheid</h3>
+                    <p>Voor zover wettelijk toegestaan sluit Wrapz alle aansprakelijkheid uit voor schade van welke aard dan ook, ontstaan door of in verband met:</p>
+                    <ul>
+                        <li>Het gebruik of onmogelijkheid van gebruik van de producten</li>
+                        <li>Onjuist gebruik, onvoldoende reiniging of verkeerde toepassing</li>
+                        <li>Gebruik bij temperaturen boven kamertemperatuur</li>
+                        <li>Contact met scherpe voorwerpen, ruwe oppervlakken of chemische stoffen</li>
+                        <li>Gebruik voor het verpakken van rauw vlees, vis, warme voedingsmiddelen of andere potentieel gevaarlijke producten</li>
+                        <li>Allergische reacties op bijenwas, natuurlijke ingrediënten of andere bestanddelen</li>
+                        <li>Bederf van voedsel door onvoldoende conservering</li>
+                        <li>Gevolgschade, indirecte schade, gederfde winst of immateriële schade</li>
+                        <li>Schade door normale slijtage, veroudering of verkleuring</li>
+                        <li>Schade ontstaan door niet-naleving van gebruiksinstructies</li>
+                    </ul>
+                    
+                    <h3>6.3 Eigen risico en verantwoordelijkheid</h3>
+                    <p>De koper gebruikt de producten volledig op eigen risico en is zelf verantwoordelijk voor:</p>
+                    <ul>
+                        <li>Het controleren van geschiktheid voor het beoogde gebruik</li>
+                        <li>Het naleven van alle gebruiks- en veiligheidsinstructies</li>
+                        <li>Het controleren op allergische reacties voorafgaand aan gebruik</li>
+                        <li>Juiste hygiëne en reiniging van de producten</li>
+                        <li>Het monitoren van de staat van verpakte voedingsmiddelen</li>
+                    </ul>
+                    
+                    <h3>6.4 Beperking in geval van dwingende wettelijke aansprakelijkheid</h3>
+                    <p>Uitsluitend indien en voor zover uitsluiting van aansprakelijkheid wettelijk niet is toegestaan, is de aansprakelijkheid van Wrapz beperkt tot directe schade en maximaal het bedrag van de koopprijs van het betreffende product, met een absoluut maximum van €25 per gebeurtenis.</p>
+                    
+                    <h3>6.5 Geen aansprakelijkheid voor derden</h3>
+                    <p>Wrapz is niet aansprakelijk voor schade aan derden ontstaan door gebruik van de producten door de koper.</p>
+
+                    <h2>7. Gebruik en Veiligheid</h2>
+                    <h3>7.1 Gebruiksinstructies</h3>
+                    <p>De producten zijn uitsluitend bedoeld voor het verpakken van voedsel bij kamertemperatuur of in de koelkast. Gebruikers zijn volledig zelf verantwoordelijk voor het naleven van alle instructies en waarschuwingen.</p>
+                    
+                    <h3>7.2 Uitdrukkelijke waarschuwingen en verboden</h3>
+                    <p><strong>WAARSCHUWING:</strong> Onjuist gebruik kan leiden tot schade. Het volgende is uitdrukkelijk verboden:</p>
+                    <ul>
+                        <li><strong>NOOIT</strong> gebruiken in magnetron, oven, of bij hete oppervlakken</li>
+                        <li><strong>NOOIT</strong> gebruiken voor voedingsmiddelen warmer dan kamertemperatuur</li>
+                        <li><strong>NOOIT</strong> gebruiken voor rauw vlees, vis, gevogelte of andere risicovolle voedingsmiddelen</li>
+                        <li><strong>NOOIT</strong> gebruiken zonder voorafgaande allergietest bij bekende bijenwas allergie</li>
+                        <li><strong>NOOIT</strong> hergebruiken zonder grondige reiniging</li>
+                        <li><strong>NOOIT</strong> gebruiken indien beschadigd of vervuild</li>
+                    </ul>
+                    
+                    <h3>7.3 Eigen verantwoordelijkheid</h3>
+                    <p>Door aanschaf en gebruik erkent de koper dat:</p>
+                    <ul>
+                        <li>Gebruik volledig op eigen risico plaatsvindt</li>
+                        <li>Alle instructies en waarschuwingen begrepen en geaccepteerd zijn</li>
+                        <li>Eigen verantwoordelijkheid bestaat voor voedselkwaliteit en -veiligheid</li>
+                        <li>Regelmatige controle van de producten op slijtage noodzakelijk is</li>
+                        <li>Bij twijfel over geschiktheid het product niet gebruikt wordt</li>
+                    </ul>
+
+                    <h2>8. Klachten</h2>
+                    <h3>8.1 Klachtenprocedure</h3>
+                    <p>Klachten kunnen binnen redelijke termijn schriftelijk worden ingediend via info@wrapz.com. Wij streven ernaar klachten binnen 14 dagen af te handelen.</p>
+
+                    <h2>9. Toepasselijk Recht</h2>
+                    <h3>9.1 Nederlands recht</h3>
+                    <p>Op alle overeenkomsten is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde Nederlandse rechter, tenzij de wet dwingend anders bepaalt.</p>
+                    
+                    <h3>9.2 Geschillencommissie</h3>
+                    <p>Voor consumentenzaken kan gebruik worden gemaakt van de Geschillencommissie Webwinkels (www.sgc.nl).</p>
+
+                    <h2>10. Slotbepalingen</h2>
+                    <h3>10.1 Wijzigingen</h3>
+                    <p>Wrapz behoudt zich het recht voor deze voorwaarden te wijzigen. Wijzigingen worden van tevoren gecommuniceerd en zijn van toepassing op nieuwe bestellingen.</p>
+                    
+                    <h3>10.2 Nietigheid</h3>
+                    <p>Indien een bepaling van deze voorwaarden nietig of vernietigbaar blijkt, blijven de overige bepalingen volledig van kracht.</p>
+
+                    <hr style="margin: 2rem 0;">
+                    
+                    <h2>Contactgegevens</h2>
+                    <p>
+                        <strong>Wrapz</strong><br>
+                        Amsterdam, Nederland<br>
+                        E-mail: info@wrapz.com<br>
+                        Telefoon: +31 6 12345678
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact-page" class="page-content">
+        <div style="padding-top: 160px; padding-bottom: 80px;">
+            <div class="container">
+                <h1 class="section-title">Get in touch</h1>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact information</h3>
+                        <p><strong>Email:</strong> info@wrapz.com</p>
+                        <p><strong>Phone:</strong> +31 6 12345678</p>
+                        <p><strong>Address:</strong> Amsterdam, Netherlands</p>
+                        
+                        <h3 style="margin-top: 2rem;">Business hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                        <p>Sunday: Closed</p>
+
+                        <h3 style="margin-top: 2rem;">Follow us</h3>
+                        <p>
+                            <a href="#" style="color: #F8De8c; margin-right: 1rem;">Instagram</a>
+                            <a href="#" style="color: #F8De8c; margin-right: 1rem;">Facebook</a>
+                            <a href="#" style="color: #F8De8c;">LinkedIn</a>
+                        </p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send us a message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Send message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 style="color: #F8De8c;">Wrapz</h4>
+                    <p>Sustainable beeswax food wraps for a better tomorrow</p>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: #F8De8c;">Quick links</h4>
+                    <p><a href="#" onclick="showPage('home')">Home</a></p>
+                    <p><a href="#" onclick="showPage('shop')">Shop</a></p>
+                    <p><a href="#" onclick="showPage('faq')">FAQ</a></p>
+                    <p><a href="#" onclick="showPage('contact')">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: #F8De8c;">Legal</h4>
+                    <p><a href="#" onclick="showPage('terms')">Terms & conditions</a></p>
+                    <p><a href="#">Privacy policy</a></p>
+                    <p><a href="#">Returns</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: #F8De8c;">Customer service</h4>
+                    <p><a href="#">Shipping info</a></p>
+                    <p><a href="#" onclick="showPage('faq')">FAQ</a></p>
+                    <p><a href="#" onclick="showPage('contact')">Contact us</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 Wrapz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Handle FAQ toggle
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                button.classList.add('active');
+                answer.classList.add('active');
+            }
+        }
+
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId + '-page').classList.add('active');
+            
+            // Update navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Find and activate the corresponding nav link
+            const activeLink = Array.from(navLinks).find(link => 
+                link.getAttribute('onclick').includes(pageId)
+            );
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Load product images - now using direct file references
+        async function loadProductImages() {
+            console.log('Product images will load from image1.jpg, image2.jpg, image3.jpg, image4.jpg');
+            // Images are now loaded via CSS, no JavaScript needed
+        }
+
+        // Smooth scrolling and other interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load product images first
+            loadProductImages();
+            
+            // Add smooth reveal animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards for animation
+            document.querySelectorAll('.product-card, .benefit-card, .shop-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
